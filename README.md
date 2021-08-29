@@ -1,2 +1,2 @@
-# ETEC-DesenvolvimentoSistemas-MODULO-2
- Aqui fica todos as atividades do meu curso de técnico em desenvolvimento de sistemas na ETEC Hortlândia.
+# Desenvolvimento de Sistemas – MODULO 2 – ETEC Hortolândia
+ Aqui fica todos as atividades do segundo módulo do curso técnico em desenvolvimento de sistemas na ETEC Hortlândia.
