@@ -1,5 +1,4 @@
 <?php
-
 require_once '../model/Usuario.php';
 
 class UsuarioController{
@@ -16,7 +15,5 @@ class UsuarioController{
         $usuarios = new Usuario;
         return $usuarios->listAll();
     }
-
 }
-
 ?>

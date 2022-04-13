@@ -1,5 +1,5 @@
 <?php
-    require_once '../controller/UsuarioController.php';
+    require_once '../controller/ImovelController.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <h1>Usuarios:</h1>
+    <h1>Imoveis:</h1>
     <hr>
     <main>
         <table>
@@ -23,19 +23,21 @@
                 <tr>
                     <th>Login</th>
                     <th>Permissão</th>
-                    <th><a href="cadUsuario">Novo</a></th>
+                    <th><a href="cadImovel">Novo</a></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $usuarios = call_user_func(array('UsuarioController','listar'));
+                $imoveis = call_user_func(array('ImovelController','listar'));
 
-                if(isset($usuarios)) {
-                    foreach($usuarios as $usuario) {
+                if(isset($imoveis)) {
+                    foreach($imoveis as $imovel) {
                         ?>
                         <tr>
-                            <td><?php echo $usuario->getLogin(); ?></td>
-                            <td><?php echo $usuario->getPermissao(); ?></td>
+                            <td><?php echo $imovel->getEndereco(); ?></td>
+                            <td><?php echo $imovel->getNQuartos(); ?></td>
+                            <td><?php echo $imovel->getMetragem(); ?></td>
+                            <td><?php echo $imovel->getNGaragem(); ?></td>
                             <td>
                                 <a href="">Editar</a>
                                 <a href="">Excluir</a>

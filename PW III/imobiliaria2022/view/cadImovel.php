@@ -1,5 +1,5 @@
 <?php
-    require_once '../controller/UsuarioController.php';
+    require_once '../controller/ImovelController.php';
 ?>
 
 <!DOCTYPE html>
@@ -88,21 +88,18 @@
     <main>
         <h1>Cadastro</h1>
         <form name="cadUsuario" id="cadUsuario" action="" method="post">
-            <label>Usuário: </label> <br>
-            <input type="text" name="login" id="login" value="" />
+            <label>Endereço: </label> <br>
+            <input type="text" name="endereco" id="endereco" value="" />
             <br>
-            <label>Senha:</label> <br>
-            <input type="password" name="senha1" id="senha1" value="" />
+            <label>Número de quartos:</label> <br>
+            <input type="password" name="nQuartos" id="nQuartos" value="" />
             <br>
-            <label>Confirmar Senha:</label> <br>
-            <input type="password" name="senha2" id="senha2" value="" />
+            <label>Metragem:</label> <br>
+            <input type="password" name="metragem" id="metragem" value="" />
             <br>
-            <label>Permissão: </label><br>
-            <select name="permissao" id="permissao">
-                <option value="0">***SELECIONE***</option>
-                <option value="A">Administrador</option>
-                <option value="C">Comum</option>
-            </select>
+            <label>Numero de garagens:</label> <br>
+            <input type="password" name="nGaragem" id="nGaragem" value="" />
+            <br>
 
             <input type="submit" name="btnCadastrar" id="btnCadastrar" value="Cadastrar" />
             </div>
@@ -114,6 +111,6 @@
 </html>
 <?php
     if(isset($_POST['btnCadastrar'])){
-        call_user_func(array('UsuarioController','salvar'));
+        call_user_func(array('ImovelController','salvar'));
     }
 ?>
